@@ -1,0 +1,55 @@
+
+
+.modal {
+    display: block;
+}
+
+.back {
+  background-color: white;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.hide {
+  display: none;
+}
+
+.modal {
+display: block;
+}
+.modal-body:before,
+.modal-body:after {
+display: table;
+content: " ";
+}
+.modal-header:before,
+.modal-header:after {
+display: table;
+content: " ";
+}
+
+.modal-header h3 {
+  padding: 0px; 
+  margin: 0px;
+}
+
+.modal-body {
+  padding: 15px;
+}
+
+.modal-footer {
+  padding: 8px 10px 10px;
+  margin-bottom: 0;
+  background-color: #f5f5f5;
+}
+
+
+
+.buy-modal-image {
+  float: left;
+  margin: 5px;
+}
+
+.buy-modal-details {
+
+}

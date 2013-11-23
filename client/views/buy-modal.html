@@ -1,0 +1,19 @@
+<div class="modal-dialog fade in">
+  <div class="back">
+    <div class="modal-header">
+      <h3>{{book.title | uppercase}}</h3>
+    </div>
+    <div class="modal-body">
+      <div class="buy-modal-image">
+        <img ng-src="{{book.image}}">
+      </div>
+      <div class="buy-modal-details">
+        <pre>{{book | json}}</pre>
+      </div>
+    </div>
+    <div class="modal-footer">
+      <button class="btn btn-primary" ng-click="ok()">OK</button>
+      <button class="btn btn-warning" ng-click="cancel()">Cancel</button>
+    </div>
+  </div>
+</div>

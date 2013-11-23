@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="textbook" ng-controller="mainCtrl">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>{{title}}</title>
+
+    <!-- libraries -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+    <!-- my style -->
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link rel="stylesheet" type="text/css" href="css/books.css">
+    <link rel="stylesheet" type="text/css" href="css/modal.css">
+  </head>
+  <body>
+
+    <div header></div>
+
+    <div class="container main-body">
+        <div ng-view></div>
+    </div>
+
+    <!-- libraries -->
+    <script src="js/lib/jquery.min.js"></script>
+    <script src="js/lib/angular.min.js"></script>
+    <script src="js/lib/bootstrap.min.js"></script>
+    <script src="js/lib/ui-bootstrap.min.js"></script>
+    <script src="js/lib/ui-bootstrap-tpls.min.js"></script>
+
+    <!-- Main -->
+    <script src="js/app/main.js"></script>
+
+    <!-- Controllers -->
+    <script src="js/app/controllers/buy-modal.js"></script>
+    <script src="js/app/controllers/buy.js"></script>
+    <script src="js/app/controllers/header.js"></script>
+    <script src="js/app/controllers/home.js"></script>
+    <script src="js/app/controllers/main.js"></script>
+    <script src="js/app/controllers/new.js"></script>
+    <script src="js/app/controllers/sell.js"></script>
+
+    <!-- Directives -->
+    <script src="js/app/directives/header.js"></script>
+
+    <!-- Filters -->
+    <script src="js/app/filters/range.js"></script>
+
+    <!-- Services -->
+    <script src="js/app/services/books.js"></script>
+    <script src="js/app/services/nav.js"></script>
+    <script src="js/app/services/users.js"></script>
+
+  </body>
+</html>

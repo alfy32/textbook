@@ -1,0 +1,35 @@
+
+<h3 class="text-center">{{heading}}</h3>
+
+<div class="form-group">
+  <input type="text" class="form-control" ng-model="search.$" placeholder="Search">
+</div>
+<div class="form-group">
+  <input type="text" class="form-control" ng-model="lower" placeholder="Search Price">
+</div>
+<div class="form-group">
+  <input type="text" class="form-control" ng-model="upper" placeholder="Search Price">
+</div>
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th ng-click="setPredicate('image')">Image</th>
+      <th ng-click="setPredicate('isbn')">ISBN</th>
+      <th ng-click="setPredicate('title')">Title</th>
+      <th ng-click="setPredicate('author')">Author</th>
+      <th ng-click="setPredicate('price')">Price</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr 
+        ng-repeat="book in books | orderBy:predicate:reverse | filter:search | range:'price':lower:upper"
+        ng-click="choose(book.isbn)">
+      <td><img ng-src="{{book.image}}"></td>
+      <td>{{book.isbn}}</td>
+      <td>{{book.title}}</td>
+      <td>{{book.author}}</td>
+      <td>{{book.price | currency}}</td>
+    </tr>
+  </tbody>
+</table>
