@@ -1,11 +1,12 @@
 var     http = require('http'),
           fs = require('fs'),
-     express = require('express');
+     express = require('express'),
+      config = require('config');
 
 var app = express();
 
 app.configure(function () {
-  app.set('port', process.env.VCAP_APP_PORT || process.env.PORT || 3000);
+  app.set('port', process.env.PORT || config.port);
   app.use(express.favicon());
   app.use(express.logger('dev'));
   app.use(express.bodyParser());
